@@ -1,10 +1,31 @@
 /* ========================================================================= */
 /*  Preloader Script
 /* =========================================================================
+*/
 
 window.onload = function () {
-    document.getElementById('loading-mask').style.display = 'none';
-} */
+    jQuery(document).ready(function() {
+        var owl = $(".carousel");
+        owl.owlCarousel({
+            navigation: false, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+            loop: true,
+            autoPlay: true,
+            autoPlaySpeed: 5000,
+            autoPlayTimeout: 5000,
+            autoPlayHoverPause: true
+
+        });
+        $("#testimonial").owlCarousel({
+            autoPlay : 5000,
+            stopOnHover : false
+        });
+
+    })
+    //document.getElementById('loading-mask').style.display = 'none';
+}
 
 $(function(){
     /* ========================================================================= */
@@ -75,11 +96,6 @@ $(function(){
 
     $("#testimonial").owlCarousel({
 		items:4,
-    loop:true,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:1000,
-    autoplayHoverPause:true,
         pagination : true, // Show bullet pagination
         slideSpeed : 300,
         paginationSpeed : 400,
