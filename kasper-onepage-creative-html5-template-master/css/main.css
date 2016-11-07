@@ -245,8 +245,10 @@ width: 11px;
   overflow: hidden;
 }
 
-#home-carousel .carousel-inner .item {
-  background-size:cover;
+#home-carousel
+{
+    left: 0 !important;
+    right: 0 !important;
 }
 
 #home-carousel .slider-content {
@@ -276,7 +278,9 @@ width: 11px;
   text-shadow: none;
   text-transform: uppercase;
 }
-
+#home-carousel #nav-arrows{
+    display:none !important;
+}
 #home-carousel .carousel-inner p {
   color: #FFFFFF;
   line-height: 28px;

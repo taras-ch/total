@@ -5,27 +5,23 @@
 
 window.onload = function () {
     jQuery(document).ready(function() {
-        var owl = $(".carousel");
+        var owl = $("#home-carousel .carousel-inner");
         owl.owlCarousel({
-            navigation: false, // Show next and prev buttons
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-            loop: true,
-            autoPlay: true,
-            autoPlaySpeed: 5000,
-            autoPlayTimeout: 5000,
-            autoPlayHoverPause: true
-
-        });
-        $("#testimonial").owlCarousel({
             autoPlay : 5000,
-            stopOnHover : false
+            stopOnHover : false,
+            navigation:false,
+            singleItem : true,
+            autoHeight : true,
+            transitionStyle:"fade"
         });
-
     })
     //document.getElementById('loading-mask').style.display = 'none';
 }
+
+$("#testimonial").owlCarousel({
+    autoPlay : 5000,
+    stopOnHover : false
+});
 
 $(function(){
     /* ========================================================================= */
